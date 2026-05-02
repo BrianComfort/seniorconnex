@@ -1105,10 +1105,10 @@
       sprite.width = sprite.height = SP;
       const sctx = sprite.getContext('2d');
       const grad = sctx.createRadialGradient(SP/2, SP/2, 0, SP/2, SP/2, SP/2);
-      grad.addColorStop(0.00, 'rgba(248, 238, 209)');
-      grad.addColorStop(0.25, 'rgba(248, 238, 209)');
-      grad.addColorStop(0.60, 'rgba(248, 238, 209)');
-      grad.addColorStop(1.00, 'rgba(200, 169, 106, 0)');
+      grad.addColorStop(0.00, 'rgba(198, 198, 198, 2)');
+      grad.addColorStop(0.25, 'rgba(198, 198, 198, 1)');
+      grad.addColorStop(0.60, 'rgba(198, 198, 198, 0)');
+      grad.addColorStop(1.00, 'rgba(198, 198, 198, 0)');
       sctx.fillStyle = grad;
       sctx.fillRect(0, 0, SP, SP);
 
