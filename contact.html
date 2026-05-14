@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — SeniorConnex</title>
+  <meta name="description"
+    content="Sign up for the SeniorConnex beta — for families and senior-care facilities. We reply to every message personally." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/site.css" />
+  <style>
+    /* Page-specific layout — form + side panel */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: clamp(36px, 5vw, 80px);
+      margin-top: clamp(40px, 5vh, 64px);
+      align-items: start;
+    }
+
+    @media (max-width: 880px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .contact-info {
+      padding-top: 12px;
+    }
+
+    .contact-info .lede {
+      margin-bottom: 32px;
+    }
+
+    .info-block {
+      padding: 22px 0;
+      border-top: 1px solid var(--ink-line);
+    }
+
+    .info-block:last-child {
+      border-bottom: 1px solid var(--ink-line);
+    }
+
+    .info-block h4 {
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-mute);
+      margin: 0 0 8px;
+      font-weight: 500;
+    }
+
+    .info-block p {
+      font-size: 16px;
+      color: var(--ink);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .info-block a {
+      color: var(--brand-600);
+      transition: color .2s ease;
+    }
+
+    .info-block a:hover {
+      color: var(--brand-700);
+    }
+
+    /* Hero is smaller on this page */
+    .hero-inner.hero-contact {
+      min-height: 60vh;
+      align-items: flex-end;
+    }
+
+    /* Success state */
+    .form-success {
+      display: none;
+      background: var(--brand-50);
+      border: 1px solid var(--brand-200);
+      color: var(--brand-800);
+      padding: 14px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .form.submitted .form-success {
+      display: block;
+    }
+
+    .form.submitted .form-body {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       NAV
+       ============================================================ -->
+  <nav class="nav" id="nav">
+    <a href="index.html" class="brand">SeniorConnex</a>
+    <div class="nav-links" id="navLinks">
+      <a href="how-it-works.html">How it works</a>
+      <a href="for-facilities.html">For Facilities</a>
+      <a href="for-families.html">For Families</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="nav-cta active"><span>Talk to Us</span></a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============================================================
+       1. HERO
+       ============================================================ -->
+  <header class="hero-inner hero-contact tex tex-blue-4">
+    <div class="hero-content">
+      <p class="eyebrow reveal">Talk to us</p>
+      <h1 class="reveal">Bring SeniorConnex to your loved one.</h1>
+      <p class="lede reveal">
+        We work with families and facilities from across the United States. Whether you're interested in a pilot for
+        your facility, or you're a family who wants to protect your loved one with SeniorConnex, we'd love to hear from
+        you. We reply to every message personally.
+      </p>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       2. FORM + SIDE PANEL
+       ============================================================ -->
+  <section class="section section-cream">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <form class="form reveal" id="betaForm" novalidate>
+          <div class="form-success" role="status">
+            <strong>Thanks — we've got it.</strong><br />
+            Someone from our team will be in touch within one business day. If your situation is urgent, email <a
+              href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a>.
+          </div>
+
+          <div class="form-body" style="display: grid; gap: 22px;">
+            <div class="field-row">
+              <div class="field">
+                <label for="name">Your name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required autocomplete="email"
+                  placeholder="you@example.com" />
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field">
+                <label for="role">I'm joining as</label>
+                <select id="role" name="role" required>
+                  <option value="" disabled selected>Choose one…</option>
+                  <option value="family">A family member</option>
+                  <option value="facility">A senior-care facility</option>
+                  <option value="clinician">A clinician or care provider</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="org">Organization or city</label>
+                <input type="text" id="org" name="org" autocomplete="organization" placeholder="Optional" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="message">A little about your situation</label>
+              <textarea id="message" name="message"
+                placeholder="Who are you caring for, or what kind of facility do you run? What does the quiet hour look like for you right now?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note">We reply to every message personally. Your information is never shared. HIPAA-compliant
+              by design.</p>
+          </div>
+        </form>
+
+        <!-- SIDE PANEL -->
+        <aside class="contact-info reveal">
+          <p class="eyebrow">Other ways to reach us</p>
+          <p class="lede" style="font-size: 17px;">
+            Prefer email or a phone call? We're easy to reach — and we always answer.
+          </p>
+
+          <div class="info-block">
+            <h4>Email</h4>
+            <p><a href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a></p>
+          </div>
+          <div class="info-block">
+            <h4>For facilities</h4>
+            <p>We schedule live walkthroughs on Tuesdays and Thursdays. <a href="for-facilities.html">See the facilities
+                page</a> for details.</p>
+          </div>
+          <div class="info-block">
+            <h4>For families</h4>
+            <p>Beta families get a guided onboarding call. <a href="for-families.html">Learn more</a>.</p>
+          </div>
+          <div class="info-block">
+            <h4>Response time</h4>
+            <p>One business day or less. We mean it.</p>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. FAQ
+       ============================================================ -->
+  <section class="section section-paper">
+    <div class="container-narrow">
+      <p class="eyebrow reveal">Frequently asked</p>
+      <h2 class="h2 reveal" style="max-width: 22ch;">Questions families and facilities ask us most.</h2>
+
+      <div class="faq reveal" style="margin-top: clamp(32px, 4vh, 56px);">
+        <details>
+          <summary>What exactly does the sensor track?</summary>
+          <p class="answer">Heart rate, respiration, presence in the room, posture (sitting, standing, lying), and fall
+            events. With the optional EKG band, you also get single-lead cardiac rhythm tracking. The sensor uses mmWave
+            radar — it does <em>not</em> capture images or audio.</p>
+        </details>
+
+        <details>
+          <summary>Does my loved one have to wear anything?</summary>
+          <p class="answer">No. The core SeniorConnex sensor is fully contactless — nothing to wear, charge, or
+            remember. The EKG band is optional and only recommended for residents who need cardiac-level tracking.</p>
+        </details>
+
+        <details>
+          <summary>How are alerts delivered?</summary>
+          <p class="answer">Primary channel is SMS — instantly, to the on-shift care team and, on the policy you set, to
+            designated family contacts. The mobile app and email serve as backup. Two-way acknowledgment confirms the
+            right person received the alert.</p>
+        </details>
+
+        <details>
+          <summary>Is this HIPAA-compliant?</summary>
+          <p class="answer">Yes. Every byte from sensor to dashboard is encrypted with AES-256, with HIPAA-aligned
+            access controls, audit logs, and BAA support for facility deployments.</p>
+        </details>
+
+        <details>
+          <summary>Can the facility see what each family sees, and vice versa?</summary>
+          <p class="answer">Clinicians see the whole floor in one dashboard. Each family sees a private live view of
+            <em>only</em> their loved one. Permissions are role-based and revocable at any time.
+          </p>
+        </details>
+
+        <details>
+          <summary>What about privacy — are there cameras?</summary>
+          <p class="answer">No cameras and no microphones. mmWave radar detects motion and physiological signals, not
+            images. Dignity is preserved by physics, not just policy.</p>
+        </details>
+
+        <details>
+          <summary>How long does installation take?</summary>
+          <p class="answer">A single room takes about 15 minutes — the sensor is small, mounts to a wall or ceiling, and
+            self-configures. Multi-room facility deployments are scheduled in waves over a single afternoon.</p>
+        </details>
+
+        <details>
+          <summary>What does it cost?</summary>
+          <p class="answer">Pilot pricing is set per-deployment based on room count and the care model. We'd rather talk
+            to you than publish a number that doesn't fit your situation — <a href="contact.html">send us a note</a> and
+            we'll quote your case directly.</p>
+        </details>
+
+        <details>
+          <summary>Is SeniorConnex available now?</summary>
+          <p class="answer">Yes — SeniorConnex is live in production today, protecting real patients. We're inviting a
+            small additional set of pilot facilities and beta families this quarter.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. FOOTER
+       ============================================================ -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">SeniorConnex</div>
+        <p class="footer-tag">Continuous care for the people we love most — even from afar.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="for-facilities.html">For facilities</a></li>
+          <li><a href="for-families.html">For families</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a></li>
+          <li><a href="contact.html">Talk to Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 SeniorConnex. All rights reserved.</span>
+      <span>HIPAA-Compliant · AES-256 · Powered by mmWave radar.</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/site.js"></script>
+  <script>
+    // Simple front-end form handling — replace with real endpoint later
+    (function () {
+      const form = document.getElementById('betaForm');
+      if (!form) return;
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const required = form.querySelectorAll('[required]');
+        let ok = true;
+        required.forEach(el => {
+          if (!el.value.trim()) {
+            ok = false;
+            el.style.borderColor = '#c2410c';
+          } else {
+            el.style.borderColor = '';
+          }
+        });
+        if (!ok) return;
+        form.classList.add('submitted');
+        window.scrollTo({ top: form.offsetTop - 80, behavior: 'smooth' });
+      });
+    })();
+  </script>
+</body>
+
+</html>
