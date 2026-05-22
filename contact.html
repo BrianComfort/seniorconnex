@@ -8,6 +8,8 @@
   <meta name="description"
     content="Sign up for the SeniorConnex beta — for families and senior-care facilities. We reply to every message personally." />
 
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
@@ -100,6 +102,8 @@
 
 <body>
 
+  <div class="scroll-progress" id="scrollProgress"></div>
+
   <!-- ============================================================
        NAV
        ============================================================ -->
@@ -107,8 +111,23 @@
     <a href="index.html" class="brand">SeniorConnex</a>
     <div class="nav-links" id="navLinks">
       <a href="how-it-works.html">How it works</a>
-      <a href="for-facilities.html">For Facilities</a>
-      <a href="for-families.html">For Families</a>
+      <div class="nav-drop">
+        <button class="nav-drop-trigger" type="button" aria-expanded="false">For <span class="caret" aria-hidden="true"></span></button>
+        <div class="nav-drop-menu" role="menu">
+          <a href="home-family.html" role="menuitem">
+            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+            <span><p class="menu-title">Families</p><p class="menu-sub">Adult children, spouses, and people doing the worrying.</p></span>
+          </a>
+          <a href="home-in-home-care.html" role="menuitem">
+            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></span>
+            <span><p class="menu-title">In-home care</p><p class="menu-sub">Independent caregivers and home-health agencies.</p></span>
+          </a>
+          <a href="home-facilities.html" role="menuitem">
+            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
+            <span><p class="menu-title">Senior facilities</p><p class="menu-sub">Assisted living, memory care, skilled nursing.</p></span>
+          </a>
+        </div>
+      </div>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta active"><span>Talk to Us</span></a>
     </div>
