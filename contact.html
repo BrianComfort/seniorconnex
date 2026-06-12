@@ -4,369 +4,264 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — SeniorConnex</title>
+  <title>Contact · SeniorConnex</title>
   <meta name="description"
-    content="Sign up for the SeniorConnex beta — for families and senior-care facilities. We reply to every message personally." />
+    content="Get in touch with SeniorConnex, support, sales inquiries, and locations. Tell us about your situation and we'll send a real reply." />
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css" />
-  <style>
-    /* Page-specific layout — form + side panel */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      gap: clamp(36px, 5vw, 80px);
-      margin-top: clamp(40px, 5vh, 64px);
-      align-items: start;
-    }
-
-    @media (max-width: 880px) {
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .contact-info {
-      padding-top: 12px;
-    }
-
-    .contact-info .lede {
-      margin-bottom: 32px;
-    }
-
-    .info-block {
-      padding: 22px 0;
-      border-top: 1px solid var(--ink-line);
-    }
-
-    .info-block:last-child {
-      border-bottom: 1px solid var(--ink-line);
-    }
-
-    .info-block h4 {
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--ink-mute);
-      margin: 0 0 8px;
-      font-weight: 500;
-    }
-
-    .info-block p {
-      font-size: 16px;
-      color: var(--ink);
-      margin: 0;
-      line-height: 1.55;
-    }
-
-    .info-block a {
-      color: var(--brand-600);
-      transition: color .2s ease;
-    }
-
-    .info-block a:hover {
-      color: var(--brand-700);
-    }
-
-    /* Hero is smaller on this page */
-    .hero-inner.hero-contact {
-      min-height: 60vh;
-      align-items: flex-end;
-    }
-
-    /* Success state */
-    .form-success {
-      display: none;
-      background: var(--brand-50);
-      border: 1px solid var(--brand-200);
-      color: var(--brand-800);
-      padding: 14px 18px;
-      border-radius: 12px;
-      font-size: 14px;
-      line-height: 1.5;
-    }
-
-    .form.submitted .form-success {
-      display: block;
-    }
-
-    .form.submitted .form-body {
-      display: none;
-    }
-  </style>
 </head>
 
 <body>
-
+  <a href="#main" class="skip-link">Skip to content</a>
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- ============================================================
-       NAV
-       ============================================================ -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="brand">SeniorConnex</a>
+    <a href="index.html" class="brand" aria-label="SeniorConnex home">
+      <span class="brand-badge">
+        <img src="assets/images/logo.png" alt="" />
+      </span>
+      <span class="brand-word">Senior<b>Connex</b></span>
+    </a>
     <div class="nav-links" id="navLinks">
-      <a href="how-it-works.html">How it works</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="products.html">Products</a>
       <div class="nav-drop">
-        <button class="nav-drop-trigger" type="button" aria-expanded="false">For <span class="caret" aria-hidden="true"></span></button>
+        <button class="nav-drop-trigger" type="button" aria-haspopup="true" aria-expanded="false">Who it's for <span class="caret" aria-hidden="true"></span></button>
         <div class="nav-drop-menu" role="menu">
-          <a href="home-family.html" role="menuitem">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-            <span><p class="menu-title">Families</p><p class="menu-sub">Adult children, spouses, and people doing the worrying.</p></span>
+          <a href="for-families.html" role="menuitem">
+            <span class="menu-icon menu-fam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Families</p>
+              <p class="menu-sub">Adult children &amp; spouses, watching from afar.</p>
+            </span>
           </a>
-          <a href="home-in-home-care.html" role="menuitem">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></span>
-            <span><p class="menu-title">In-home care</p><p class="menu-sub">Independent caregivers and home-health agencies.</p></span>
+          <a href="for-care-providers.html" role="menuitem">
+            <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M9 7a4 4 0 1 0 0 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Care providers</p>
+              <p class="menu-sub">In-home caregivers &amp; agencies.</p>
+            </span>
           </a>
-          <a href="home-facilities.html" role="menuitem">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
-            <span><p class="menu-title">Senior facilities</p><p class="menu-sub">Assisted living, memory care, skilled nursing.</p></span>
+          <a href="for-facilities.html" role="menuitem">
+            <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M9 14h.01M15 10h.01M15 14h.01" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Facilities</p>
+              <p class="menu-sub">Senior living &amp; care communities.</p>
+            </span>
           </a>
         </div>
       </div>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta active"><span>Talk to Us</span></a>
+      <a href="contact.html" class="active">Contact</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
     </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- ============================================================
-       1. HERO
-       ============================================================ -->
-  <header class="hero-inner hero-contact tex tex-blue-4">
-    <div class="hero-content">
-      <p class="eyebrow reveal">Talk to us</p>
-      <h1 class="reveal">Bring SeniorConnex to your loved one.</h1>
+  <main id="main">
+
+  <header class="page-hero">
+    <div class="container">
+      <h1 class="reveal">Let's bring better care to your senior.</h1>
       <p class="lede reveal">
-        We work with families and facilities from across the United States. Whether you're interested in a pilot for
-        your facility, or you're a family who wants to protect your loved one with SeniorConnex, we'd love to hear from
-        you. We reply to every message personally.
+        Tell us a little about your situation and we'll send a reply.
       </p>
     </div>
   </header>
 
-  <!-- ============================================================
-       2. FORM + SIDE PANEL
-       ============================================================ -->
-  <section class="section section-cream">
+  <section class="section bg-paper">
     <div class="container">
       <div class="contact-grid">
-
-        <!-- FORM -->
-        <form class="form reveal" id="betaForm" novalidate>
-          <div class="form-success" role="status">
-            <strong>Thanks — we've got it.</strong><br />
-            Someone from our team will be in touch within one business day. If your situation is urgent, email <a
-              href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a>.
+        <div class="reveal">
+          <div class="contact-method" id="support">
+            <span class="cm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 12a8 8 0 0 1 16 0M4 12v3a2 2 0 0 0 2 2h1v-5H6a2 2 0 0 0-2 0zM20 12v3a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 0z"/></svg></span>
+            <div>
+              <h4>Support</h4>
+              <p>Already a customer? <a href="mailto:support@seniorconnex.com" style="color:var(--blue-600);">support@seniorconnex.com</a></p>
+            </div>
           </div>
-
-          <div class="form-body" style="display: grid; gap: 22px;">
-            <div class="field-row">
-              <div class="field">
-                <label for="name">Your name</label>
-                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Doe" />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required autocomplete="email"
-                  placeholder="you@example.com" />
-              </div>
+          <div class="contact-method" id="sales">
+            <span class="cm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 7h18v12H3zM3 7l9 6 9-6"/></svg></span>
+            <div>
+              <h4>Sales inquiries</h4>
+              <p>Families &amp; care providers: <a href="mailto:hello@seniorconnex.com" style="color:var(--blue-600);">hello@seniorconnex.com</a></p>
             </div>
-
-            <div class="field-row">
-              <div class="field">
-                <label for="role">I'm joining as</label>
-                <select id="role" name="role" required>
-                  <option value="" disabled selected>Choose one…</option>
-                  <option value="family">A family member</option>
-                  <option value="facility">A senior-care facility</option>
-                  <option value="clinician">A clinician or care provider</option>
-                  <option value="other">Something else</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="org">Organization or city</label>
-                <input type="text" id="org" name="org" autocomplete="organization" placeholder="Optional" />
-              </div>
+          </div>
+          <div class="contact-method">
+            <span class="cm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <div>
+              <h4>Call us</h4>
+              <p><a href="tel:+14063709268" style="color:var(--blue-600);">(406) 370-9268</a> · Mon–Fri, 8am–6pm PT</p>
             </div>
+          </div>
+          <div class="contact-method" id="locations">
+            <span class="cm-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <div>
+              <h4>Locations</h4>
+              <p>Headquartered in the Tri-Cities, WA, piloting across Kennewick, Pasco &amp; Richland.</p>
+            </div>
+          </div>
+        </div>
 
+        <form class="form reveal" id="contactForm" novalidate>
+          <div class="field-row">
             <div class="field">
-              <label for="message">A little about your situation</label>
-              <textarea id="message" name="message"
-                placeholder="Who are you caring for, or what kind of facility do you run? What does the quiet hour look like for you right now?"></textarea>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Doe" required />
             </div>
-
-            <button type="submit" class="btn btn-primary">Send Message</button>
-            <p class="form-note">We reply to every message personally. Your information is never shared. HIPAA-compliant
-              by design.</p>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required />
+            </div>
           </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(555) 555-5555" />
+            </div>
+            <div class="field">
+              <label for="role">I'm a…</label>
+              <select id="role" name="role">
+                <option value="family">Family member</option>
+                <option value="senior">Senior</option>
+                <option value="in-home">In-home caregiver</option>
+                <option value="agency">Home-health agency</option>
+                <option value="facility">Senior facility</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="Tell us a little about your situation…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-note" id="formNote">We'll reply personally, usually within one business day.</p>
         </form>
-
-        <!-- SIDE PANEL -->
-        <aside class="contact-info reveal">
-          <p class="eyebrow">Other ways to reach us</p>
-          <p class="lede" style="font-size: 17px;">
-            Prefer email or a phone call? We're easy to reach — and we always answer.
-          </p>
-
-          <div class="info-block">
-            <h4>Email</h4>
-            <p><a href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a></p>
-          </div>
-          <div class="info-block">
-            <h4>For facilities</h4>
-            <p>We schedule live walkthroughs on Tuesdays and Thursdays. <a href="for-facilities.html">See the facilities
-                page</a> for details.</p>
-          </div>
-          <div class="info-block">
-            <h4>For families</h4>
-            <p>Beta families get a guided onboarding call. <a href="for-families.html">Learn more</a>.</p>
-          </div>
-          <div class="info-block">
-            <h4>Response time</h4>
-            <p>One business day or less. We mean it.</p>
-          </div>
-        </aside>
-
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       3. FAQ
-       ============================================================ -->
-  <section class="section section-paper">
-    <div class="container-narrow">
-      <p class="eyebrow reveal">Frequently asked</p>
-      <h2 class="h2 reveal" style="max-width: 22ch;">Questions families and facilities ask us most.</h2>
-
-      <div class="faq reveal" style="margin-top: clamp(32px, 4vh, 56px);">
-        <details>
-          <summary>What exactly does the sensor track?</summary>
-          <p class="answer">Heart rate, respiration, presence in the room, posture (sitting, standing, lying), and fall
-            events. With the optional EKG band, you also get single-lead cardiac rhythm tracking. The sensor uses mmWave
-            radar — it does <em>not</em> capture images or audio.</p>
-        </details>
-
-        <details>
-          <summary>Does my loved one have to wear anything?</summary>
-          <p class="answer">No. The core SeniorConnex sensor is fully contactless — nothing to wear, charge, or
-            remember. The EKG band is optional and only recommended for residents who need cardiac-level tracking.</p>
-        </details>
-
-        <details>
-          <summary>How are alerts delivered?</summary>
-          <p class="answer">Primary channel is SMS — instantly, to the on-shift care team and, on the policy you set, to
-            designated family contacts. The mobile app and email serve as backup. Two-way acknowledgment confirms the
-            right person received the alert.</p>
-        </details>
-
-        <details>
-          <summary>Is this HIPAA-compliant?</summary>
-          <p class="answer">Yes. Every byte from sensor to dashboard is encrypted with AES-256, with HIPAA-aligned
-            access controls, audit logs, and BAA support for facility deployments.</p>
-        </details>
-
-        <details>
-          <summary>Can the facility see what each family sees, and vice versa?</summary>
-          <p class="answer">Clinicians see the whole floor in one dashboard. Each family sees a private live view of
-            <em>only</em> their loved one. Permissions are role-based and revocable at any time.
-          </p>
-        </details>
-
-        <details>
-          <summary>What about privacy — are there cameras?</summary>
-          <p class="answer">No cameras and no microphones. mmWave radar detects motion and physiological signals, not
-            images. Dignity is preserved by physics, not just policy.</p>
-        </details>
-
-        <details>
-          <summary>How long does installation take?</summary>
-          <p class="answer">A single room takes about 15 minutes — the sensor is small, mounts to a wall or ceiling, and
-            self-configures. Multi-room facility deployments are scheduled in waves over a single afternoon.</p>
-        </details>
-
-        <details>
-          <summary>What does it cost?</summary>
-          <p class="answer">Pilot pricing is set per-deployment based on room count and the care model. We'd rather talk
-            to you than publish a number that doesn't fit your situation — <a href="contact.html">send us a note</a> and
-            we'll quote your case directly.</p>
-        </details>
-
-        <details>
-          <summary>Is SeniorConnex available now?</summary>
-          <p class="answer">Yes — SeniorConnex is live in production today, protecting real patients. We're inviting a
-            small additional set of pilot facilities and beta families this quarter.</p>
-        </details>
+  <section class="section bg-cream">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2 class="h2" style="max-width:22ch; margin-inline:auto;">Find the path that fits you.</h2>
+      </div>
+      <div class="grid-3 grid-top">
+        <a href="for-families.html" class="card reveal" style="text-decoration:none;">
+          <div class="card-icon" style="background:#fff1eb;color:#ec5832;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <h3 class="h3">For families</h3>
+          <p>Peace of mind for the people watching from afar.</p>
+        </a>
+        <a href="for-care-providers.html" class="card reveal" style="text-decoration:none;">
+          <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M9 7a4 4 0 1 0 0 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg></div>
+          <h3 class="h3">For care providers</h3>
+          <p>In-home caregivers &amp; agencies.</p>
+        </a>
+        <a href="for-facilities.html" class="card reveal" style="text-decoration:none;">
+          <div class="card-icon" style="background:#e7f0fb;color:#2f6fd0;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M9 14h.01M15 10h.01M15 14h.01"/></svg></div>
+          <h3 class="h3">For facilities</h3>
+          <p>Senior living &amp; care communities.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       4. FOOTER
-       ============================================================ -->
-  <footer>
+  </main>
+
+  <footer class="site-footer">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SeniorConnex</div>
-        <p class="footer-tag">Continuous care for the people we love most — even from afar.</p>
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand footer-brand" aria-label="SeniorConnex home">
+          <span class="brand-badge">
+            <img src="assets/images/logo.png" alt="" />
+          </span>
+          <span class="brand-word">Senior<b>Connex</b></span>
+        </a>
+        <p class="footer-tag">Healthcare technology that empowers caregivers and seniors to live safer, more connected lives.</p>
       </div>
       <div class="footer-col">
-        <h4>Product</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="how-it-works.html">How it works</a></li>
-          <li><a href="for-facilities.html">For facilities</a></li>
-          <li><a href="for-families.html">For families</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html#how">How it works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who it's for</h4>
+        <ul>
+          <li><a href="for-families.html">Families</a></li>
+          <li><a href="for-care-providers.html">Care providers</a></li>
+          <li><a href="for-facilities.html">Facilities</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#support">Support</a></li>
+          <li><a href="contact.html#locations">Locations</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a></li>
-          <li><a href="contact.html">Talk to Us</a></li>
-        </ul>
+        <h4>Connect</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.5-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4c-.8.2-1.5.8-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.5 1.7 1.7 1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.7 15.3V8.7l5.7 3.3-5.7 3.3z" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.3 8.5h3.3V21H3.3V8.5zM9.5 8.5h3.2v1.7h.05c.45-.85 1.55-1.75 3.2-1.75 3.4 0 4.05 2.25 4.05 5.15V21h-3.3v-5.5c0-1.3 0-3-1.85-3s-2.1 1.45-2.1 2.9V21H9.5V8.5z" />
+            </svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg></a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SeniorConnex. All rights reserved.</span>
-      <span>HIPAA-Compliant · AES-256 · Powered by mmWave radar.</span>
+      <span>© 2026 SeniorConnex. All rights reserved. · <a href="privacy.html">Privacy</a> · <a
+          href="terms.html">Terms</a></span>
     </div>
   </footer>
 
   <script src="assets/js/site.js"></script>
   <script>
-    // Simple front-end form handling — replace with real endpoint later
+    // Lightweight front-end form handler (no backend wired yet)
     (function () {
-      const form = document.getElementById('betaForm');
+      var form = document.getElementById('contactForm');
+      var note = document.getElementById('formNote');
       if (!form) return;
-      form.addEventListener('submit', (e) => {
+      form.addEventListener('submit', function (e) {
         e.preventDefault();
-        const required = form.querySelectorAll('[required]');
-        let ok = true;
-        required.forEach(el => {
-          if (!el.value.trim()) {
-            ok = false;
-            el.style.borderColor = '#c2410c';
-          } else {
-            el.style.borderColor = '';
-          }
-        });
-        if (!ok) return;
-        form.classList.add('submitted');
-        window.scrollTo({ top: form.offsetTop - 80, behavior: 'smooth' });
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+        note.textContent = "Thanks, your message is ready to send. (Connect this form to your inbox or CRM to go live.)";
+        note.style.color = 'var(--success)';
+        form.querySelector('button[type=submit]').textContent = 'Message ready ✓';
       });
     })();
   </script>

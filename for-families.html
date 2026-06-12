@@ -4,263 +4,302 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>For Families — SeniorConnex</title>
+  <title>For Families · SeniorConnex</title>
   <meta name="description"
-    content="SeniorConnex lets adult children, spouses, and family caregivers stay connected to a loved one's well-being — without buttons, wristbands, or daily check-in calls." />
+    content="For families: real-time updates and instant alerts so you always know Mom or Dad is okay, and peace of mind whether you're across town or across the country." />
 
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 
 <body>
-
+  <a href="#main" class="skip-link">Skip to content</a>
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- ============================================================
-       NAV
-       ============================================================ -->
   <nav class="nav" id="nav">
-    <a href="index.html" class="brand">SeniorConnex</a>
+    <a href="index.html" class="brand" aria-label="SeniorConnex home">
+      <span class="brand-badge">
+        <img src="assets/images/logo.png" alt="" />
+      </span>
+      <span class="brand-word">Senior<b>Connex</b></span>
+    </a>
     <div class="nav-links" id="navLinks">
-      <a href="how-it-works.html">How it works</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="products.html">Products</a>
       <div class="nav-drop">
-        <button class="nav-drop-trigger" type="button" aria-expanded="false">For <span class="caret" aria-hidden="true"></span></button>
+        <button class="nav-drop-trigger" type="button" aria-haspopup="true" aria-expanded="false">Who it's for <span class="caret" aria-hidden="true"></span></button>
         <div class="nav-drop-menu" role="menu">
-          <a href="home-family.html" role="menuitem" class="active">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
-            <span><p class="menu-title">Families</p><p class="menu-sub">Adult children, spouses, and people doing the worrying.</p></span>
+          <a href="for-families.html" role="menuitem">
+            <span class="menu-icon menu-fam"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Families</p>
+              <p class="menu-sub">Adult children &amp; spouses, watching from afar.</p>
+            </span>
           </a>
-          <a href="home-in-home-care.html" role="menuitem">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg></span>
-            <span><p class="menu-title">In-home care</p><p class="menu-sub">Independent caregivers and home-health agencies.</p></span>
+          <a href="for-care-providers.html" role="menuitem">
+            <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M9 7a4 4 0 1 0 0 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Care providers</p>
+              <p class="menu-sub">In-home caregivers &amp; agencies.</p>
+            </span>
           </a>
-          <a href="home-facilities.html" role="menuitem">
-            <span class="menu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span>
-            <span><p class="menu-title">Senior facilities</p><p class="menu-sub">Assisted living, memory care, skilled nursing.</p></span>
+          <a href="for-facilities.html" role="menuitem">
+            <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="1.8">
+                <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M9 14h.01M15 10h.01M15 14h.01" />
+              </svg></span>
+            <span>
+              <p class="menu-title">Facilities</p>
+              <p class="menu-sub">Senior living &amp; care communities.</p>
+            </span>
           </a>
         </div>
       </div>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta"><span>Talk to Us</span></a>
+      <a href="contact.html">Contact</a>
+      <a href="contact.html" class="nav-cta">Get Started</a>
     </div>
-    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- ============================================================
-       1. HERO
-       ============================================================ -->
-  <header class="hero-inner tex tex-blue-4">
-    <div class="hero-content">
-      <p class="eyebrow reveal">For Families</p>
-      <h1 class="reveal">Stay connected<br />to their well-being.</h1>
-      <p class="lede reveal">
-        Built for adult children, spouses, and the people doing the worrying. Monitor your loved one's health seamlessly
-        from anywhere — without buttons for them to press, wristbands to remember, or daily check-in calls to make.
-      </p>
-      <div class="btn-row reveal">
-        <a href="contact.html" class="btn btn-on-dark">Join the Beta</a>
-        <a href="#how" class="btn btn-ghost"><span>See How It Works</span></a>
+  <main id="main">
+
+  <header class="page-hero audience-fam">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1 class="reveal" style="margin-top:18px;">Love them, even from a distance.</h1>
+          <p class="lede reveal">
+            Whether you're across town or across the country, SeniorConnex gives you real-time updates and instant
+            alerts, so you always know Mom or Dad is okay, without hovering or guessing.
+          </p>
+          <div class="btn-row reveal" style="margin-top:30px;">
+            <a href="contact.html" class="btn btn-coral">Get Started</a>
+            <a href="#peace" class="btn btn-outline">How it gives peace of mind</a>
+          </div>
+        </div>
+        <div class="hero-media reveal-scale">
+          <img src="assets/images/senior-06.jpg" alt="A family member and caregiver sharing a warm moment with a senior." />
+          <div class="float-card fc-bottom">
+            <span class="fc-dot"></span>
+            <span><span class="fc-label">Mom · bedroom</span><span class="fc-value">Resting · all clear</span></span>
+          </div>
+        </div>
       </div>
     </div>
   </header>
 
-  <section class="section section-cream">
-    <div class="container-narrow" style="text-align: center;">
-      <p class="eyebrow reveal">The quiet worry</p>
-      <p class="lead-statement reveal" style="margin: 0 auto; max-width: 36ch;">
-        You can't be in the room every hour. With a care network, you don't have to wonder what's happening in the ones you're not.
-      </p>
+  <section class="section bg-paper" id="overview">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2 class="h2" style="max-width:24ch; margin-inline:auto;">The worry of not knowing, finally answered.</h2>
+        <p class="lede" style="max-width:62ch;">The hardest part of caring for a parent is the hour you can't be there. SeniorConnex fills that gap with three simple promises.</p>
+      </div>
+      <div class="grid-3 grid-top">
+        <div class="card reveal">
+          <div class="card-icon" style="background:#fff1eb;color:#ec5832;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3 class="h3">You'll know right away</h3>
+          <p>A fall or a worrying change in vitals reaches you by text in seconds, no waiting for a second-hand voicemail.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon" style="background:#fff1eb;color:#ec5832;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3 class="h3">You can check anytime</h3>
+          <p>Open the app at 2 a.m. and the answer is already there, resting comfortably, all clear.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon" style="background:#fff1eb;color:#ec5832;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="3.2"/><path d="M22 21v-2a4 4 0 0 0-3-3.8"/></svg></div>
+          <h3 class="h3">Everyone stays in sync</h3>
+          <p>Siblings, spouses, and caregivers all see the same picture, so no one's left out and nothing falls through the cracks.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       3. WHAT YOU SEE (split, image left)
-       ============================================================ -->
-  <section class="section section-paper" id="how">
-    <div class="split">
-      <div class="media">
-        <img src="images/old-lady-with-walker.jpg" alt="A parent at home, family quietly informed from afar." />
+  <section class="section bg-mist" id="app-look">
+    <div class="container">
+      <div class="showcase media-left">
+        <div class="showcase-media reveal-scale">
+          <figure class="mac-window" style="margin:0;"><div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span></span><span class="mac-url">app.seniorconnex.com</span></div><img src="assets/images/portal/connect-alerts.png" alt="SeniorConnex app alerts screen showing fall detected, bed exit, and inactivity with acknowledgment." loading="lazy" /></figure>
+        </div>
+        <div class="showcase-copy reveal">
+          <h2 class="h2">The alert reaches you in seconds.</h2>
+          <p class="lede">When something matters, SeniorConnex sends it straight to your phone, with a clear acknowledgment so the whole family knows it landed. Open it in any web browser, no app to install.</p>
+          <div class="btn-row" style="margin-top:26px;">
+            <a href="solutions.html" class="btn btn-outline">How it works</a>
+          </div>
+        </div>
       </div>
-      <div class="copy">
-        <div class="copy-inner">
-          <p class="eyebrow reveal">A calm, glanceable view</p>
-          <h2 class="h2 reveal">The app says all you need to know</h2>
-          <p class="lede reveal">
-            Clear and concise information on the state of your loved one the moment you open the SeniorConnex app. Critical
-            information up front, shared with you, your family and caregivers.
-          </p>
-          <ul class="audience-points reveal">
-            <li>Live vitals refreshed continuously, in plain language</li>
-            <li>Presence and movement — is Mom up, resting, or asleep?</li>
-            <li>Trend over the last 24 hours, the last week, the last month</li>
+    </div>
+  </section>
+
+  <section class="section bg-cream" id="peace">
+    <div class="container">
+      <div class="split">
+        <div class="media reveal-scale">
+          <img src="assets/images/senior-08.jpg" alt="A senior relaxed and content at home." />
+        </div>
+        <div class="copy reveal">
+          <div class="copy-inner">
+            <h2 class="h2">Sleep through the night again.</h2>
+            <p class="lede">
+              SeniorConnex is quiet 99% of the time, and crystal clear for the 1% that matters. You don't have to
+              call to check in or wonder if today was a good day. The phone stays calm until it genuinely needs you.
+            </p>
+            <ul class="check-list">
+              <li>Alerts only when something truly matters</li>
+              <li>Clear, plain-language updates, no medical jargon</li>
+              <li>Choose who gets paged first, and who hears it second</li>
+              <li>Privacy-first: no cameras where they don't belong</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-paper" id="connected">
+    <div class="container">
+      <div class="split image-right">
+        <div class="media reveal-scale">
+          <img src="assets/images/senior-03.jpg" alt="A senior smiling, connected with family." />
+        </div>
+        <div class="copy reveal">
+          <div class="copy-inner">
+            <h2 class="h2">More than monitoring, moments together.</h2>
+            <p class="lede">
+              One tap starts a video call on the bedside tablet, no app to open, no password to remember on their
+              end. Because peace of mind is good, but a face and a voice are better.
+            </p>
+            <ul class="check-list">
+              <li>One-tap video calls, designed for seniors</li>
+              <li>Share updates and photos across the family</li>
+              <li>See activity and milestones worth celebrating</li>
+            </ul>
+            <div class="btn-row" style="margin-top:26px;">
+              <a href="products.html" class="btn btn-outline">See the products</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-sand">
+    <div class="container">
+      <div class="section-head center reveal">
+        <h2 class="h2" style="max-width:22ch; margin-inline:auto;">What changes the day SeniorConnex arrives.</h2>
+      </div>
+      <div class="grid-2 grid-top">
+        <div class="card reveal" style="background:var(--cream);">
+          <h3 class="h3" style="color:var(--ink-mute);">Before</h3>
+          <ul class="check-list muted-list">
+            <li>Group texts at 11 p.m. asking "is everything okay?"</li>
+            <li>Hearing about a fall hours later, second-hand</li>
+            <li>Driving over just to check, again</li>
+            <li>Guessing whether today was a good day</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="border-color:var(--coral-300);">
+          <h3 class="h3 text-coral">With SeniorConnex</h3>
+          <ul class="check-list">
+            <li>Open the app, the answer is already there</li>
+            <li>Falls reach the right person in seconds</li>
+            <li>Check in from anywhere, anytime</li>
+            <li>A face-to-face call whenever you miss them</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       4. WHEN SOMETHING CHANGES (dark, textured)
-       ============================================================ -->
-  <section class="section section-dark">
+  <section class="section bg-paper">
     <div class="container">
-      <p class="eyebrow reveal">When something changes</p>
-      <h2 class="h2 reveal" style="max-width: 22ch;">Immediate SMS — the moment something needs attention.</h2>
-      <p class="lede reveal" style="max-width: 62ch;">
-        A fall. A cardiac event. Respiration drifting outside normal range. SeniorConnex sends an SMS to your phone in
-        seconds — and, when they're in a facility, to their care team at the same time. You're never the last to know.
-      </p>
-
-      <div class="grid-3">
-        <div class="card reveal">
-          <span class="num">01</span>
-          <h3 class="h3">Fall detected</h3>
-          <p>Radar identifies a fall in seconds — without cameras, floor sensors, or anything they have to wear.</p>
-        </div>
-        <div class="card reveal">
-          <span class="num">02</span>
-          <h3 class="h3">Vitals out of range</h3>
-          <p>Heart rate or respiration drifting outside their personal baseline. Alert before it becomes an emergency.
-          </p>
-        </div>
-        <div class="card reveal">
-          <span class="num">03</span>
-          <h3 class="h3">Unusual stillness</h3>
-          <p>Movement stops where it shouldn't — the bathroom floor at 2am, an unexpectedly long stretch in bed.</p>
+      <div class="cta-banner reveal">
+        <h2 class="h2">Give your family peace of mind.</h2>
+        <p class="lede">Tell us about your parent's situation and we'll help you set up the right care circle.</p>
+        <div class="btn-row">
+          <a href="contact.html" class="btn btn-on-brand">Get Started</a>
+          <a href="solutions.html" class="btn btn-ghost-light">See how it works</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============================================================
-       5. NOTHING TO LEARN OR REMEMBER (split)
-       ============================================================ -->
-  <section class="section section-cream">
-    <div class="split image-right">
-      <div class="media">
-        <img src="images/old-lady-in-chair.jpg" alt="A senior at home, comfortable and unencumbered by tech." />
-      </div>
-      <div class="copy">
-        <div class="copy-inner">
-          <p class="eyebrow reveal">For them — invisible</p>
-          <h2 class="h2 reveal">Nothing to wear, charge, learn, or remember.</h2>
-          <p class="lede reveal">
-            The hardest part of getting an older parent to use a pendant or wristband is the wearing of it. SeniorConnex
-            skips that fight entirely. A small radar sensor mounts on the wall or ceiling. They forget it's there within
-            a week. You never have to remind them, fix it, charge it, or replace its battery.
-          </p>
-          <ul class="audience-points reveal">
-            <li>No buttons. No bracelets. No "did you charge it last night?"</li>
-            <li>Works through clothes, sheets, and walls — even in the dark</li>
-            <li>Their privacy preserved — no cameras, no audio</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
-  <!-- ============================================================
-       6. WHO USES IT
-       ============================================================ -->
-  <section class="section section-paper">
-    <div class="container">
-      <p class="eyebrow reveal">Who SeniorConnex is for</p>
-      <h2 class="h2 reveal" style="max-width: 22ch;">The people doing the worrying.</h2>
-
-      <div class="grid-3">
-        <div class="card reveal">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
-          <h3 class="h3">Adult children</h3>
-          <p>Long-distance caregivers who can't drive over every night. Glance at your phone before bed and sleep through the night.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-            </svg>
-          </div>
-          <h3 class="h3">Spouses</h3>
-          <p>For the partner sleeping next to someone managing a heart condition, dementia or recovery. Sleep
-            deeper. Wake calmer.</p>
-        </div>
-        <div class="card reveal">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-              <polyline points="9 22 9 12 15 12 15 22" />
-            </svg>
-          </div>
-          <h3 class="h3">Family caregivers</h3>
-          <p>Daughters, sons, in-laws, and siblings. A second set of eyes for the hours you have
-            to be elsewhere.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section-dark cta">
-    <div class="cta-inner">
-      <p class="eyebrow reveal">For Families</p>
-      <h2 class="display reveal" style="max-width: 18ch; margin-inline: auto;">Give your senior the care they deserve.</h2>
-      <p class="lede sub reveal">
-
-      </p>
-      <div class="btn-row reveal">
-        <a href="contact.html" class="btn btn-on-dark">Join the Beta</a>
-        <a href="how-it-works.html" class="btn btn-ghost"><span>How it works</span></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
-  <footer>
+  <footer class="site-footer">
     <div class="footer-grid">
-      <div>
-        <div class="footer-brand">SeniorConnex</div>
-        <p class="footer-tag">Continuous care for the people we love most — even from afar.</p>
+      <div class="footer-brand-col">
+        <a href="index.html" class="brand footer-brand" aria-label="SeniorConnex home">
+          <span class="brand-badge">
+            <img src="assets/images/logo.png" alt="" />
+          </span>
+          <span class="brand-word">Senior<b>Connex</b></span>
+        </a>
+        <p class="footer-tag">Healthcare technology that empowers caregivers and seniors to live safer, more connected lives.</p>
       </div>
       <div class="footer-col">
-        <h4>Product</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="how-it-works.html">How it works</a></li>
-          <li><a href="for-facilities.html">For facilities</a></li>
-          <li><a href="for-families.html">For families</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="solutions.html#how">How it works</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Who it's for</h4>
+        <ul>
+          <li><a href="for-families.html">Families</a></li>
+          <li><a href="for-care-providers.html">Care providers</a></li>
+          <li><a href="for-facilities.html">Facilities</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#support">Support</a></li>
+          <li><a href="contact.html#locations">Locations</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Contact</h4>
-        <ul>
-          <li><a href="mailto:hello@seniorconnex.com">hello@seniorconnex.com</a></li>
-          <li><a href="contact.html">Talk to Us</a></li>
-        </ul>
+        <h4>Connect</h4>
+        <div class="footer-social">
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.5-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4c-.8.2-1.5.8-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.5 1.7 1.7 1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.7 15.3V8.7l5.7 3.3-5.7 3.3z" />
+            </svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.3 8.5h3.3V21H3.3V8.5zM9.5 8.5h3.2v1.7h.05c.45-.85 1.55-1.75 3.2-1.75 3.4 0 4.05 2.25 4.05 5.15V21h-3.3v-5.5c0-1.3 0-3-1.85-3s-2.1 1.45-2.1 2.9V21H9.5V8.5z" />
+            </svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg></a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 SeniorConnex. All rights reserved.</span>
-      <span>HIPAA-Compliant · AES-256 · Powered by mmWave radar.</span>
+      <span>© 2026 SeniorConnex. All rights reserved. · <a href="privacy.html">Privacy</a> · <a
+          href="terms.html">Terms</a></span>
     </div>
   </footer>
 
