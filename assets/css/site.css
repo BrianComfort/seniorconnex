@@ -415,6 +415,8 @@ h1, h2, h3, h4, .display, .h1, .h2, .h3, .h4 {
   .hero-grid { grid-template-columns: 1fr; gap: 36px; }
   .hero-media { aspect-ratio: 4 / 3; max-height: 420px; }
 }
+.hero-media-col { display: flex; flex-direction: column; }
+.hero-why { align-self: center; margin-top: 18px; }
 
 .trust-strip {
   display: flex; flex-wrap: wrap; align-items: center; gap: 14px 30px;
