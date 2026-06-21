@@ -1,9 +1,18 @@
 (function () {
   const nav = document.getElementById('nav');
   if (!nav) return;
-  const update = () => nav.classList.toggle('scrolled', window.scrollY > 16);
-  window.addEventListener('scroll', update, { passive: true });
-  update();
+  const sentinel = document.createElement('span');
+  sentinel.setAttribute('aria-hidden', 'true');
+  sentinel.style.cssText = 'position:absolute;top:16px;left:0;width:1px;height:1px;pointer-events:none;';
+  document.body.prepend(sentinel);
+  if (!('IntersectionObserver' in window)) {
+    nav.classList.add('scrolled');
+    return;
+  }
+  const io = new IntersectionObserver(([entry]) => {
+    nav.classList.toggle('scrolled', !entry.isIntersecting);
+  }, { threshold: 0 });
+  io.observe(sentinel);
 })();
 
 (function () {
@@ -86,18 +95,6 @@
     });
   }, { threshold: 0.5 });
   counters.forEach(c => io.observe(c));
-})();
-
-(function () {
-  const bar = document.getElementById('scrollProgress');
-  if (!bar) return;
-  const update = () => {
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
-  };
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  update();
 })();
 
 (function () {
