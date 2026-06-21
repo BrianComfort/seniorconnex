@@ -1,257 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Transaction Record</title>
-    <style>
-        @page {
-            size: A4;
-            margin: 0;
-
-        }
-
-        body {
-
-            font-family: Calibri, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            width: 210mm;
-            height: 296mm;
-
-        }
-
-        .page-container {
-
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-
-        }
-
-        .left {
-            text-align: left;
-        }
-
-        .shrink {
-            padding: 1px;
-            line-height: 10px;
-        }
-
-        .no-border {
-            border: none !important;
-        }
-
-        /* --- TOP HALF: THE FORM (Exactly 50%) --- */
-        .form-section {
-            height: 45%;
-            padding: 30px 40px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            gap: 0px
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th,
-        td {
-
-            border: 1px solid black;
-            padding: 6px 8px;
-            text-align: left;
-            font-size: 11pt;
-
-        }
-
-        .header-cell {
-
-            background-color: #f2f2f2;
-            font-weight: bold;
-
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .bold {
-
-            font-weight: bold;
-
-        }
-
-        .small {
-            height: 10px;
-        }
-
-        .center {
-
-            text-align: center;
-
-        }
-
-        .right {
-
-            text-align: right;
-
-        }
-
-        .col-des {
-
-            width: 25%;
-
-        }
-
-        .col-but {
-
-            width: 55%;
-        }
-
-        .no-bottom-border {
-            border-bottom-style: none !important;
-        }
-
-        .no-top-border {
-            border-top-style: none !important;
-        }
-
-        .col-amt {
-
-            width: 20%;
-
-        }
-
-        .sig-box {
-
-            height: 60px;
-            vertical-align: top;
-
-        }
-
-        /* --- BOTTOM HALF: IMAGES (Exactly 50%) --- */
-        .receipts-section {
-
-            height: 50%;
-            display: flex;
-            border-top: 2px dashed #999;
-            box-sizing: border-box;
-
-        }
-
-        .receipt-container {
-
-            width: 50%;
-            height: 100%;
-            padding: 10px;
-            box-sizing: border-box;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border-right: 1px solid #eee;
-            overflow: hidden;
-        }
-
-        img {
-
-            max-width: 100%;
-            max-height: 95%;
-            object-fit: contain;
-
-        }
-
-        @media print {
-
-            body {
-
-                -webkit-print-color-adjust: exact;
-            }
-
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting · SeniorConnex</title>
+  <link rel="canonical" href="about.html#promise" />
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="refresh" content="0; url=about.html#promise" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; font-family: Inter, sans-serif; background: #f6f8fb; color: #1b2430; }
+    main { text-align: center; padding: 32px; }
+    h1 { font-family: Poppins, sans-serif; margin: 0 0 12px; }
+    a { color: #1f66b5; font-weight: 600; }
+  </style>
 </head>
 
 <body>
-    <div class="page-container">
-        <div class="form-section">
-            <table>
-                <tr>
-                    <td class="bold">DEMANDEUR:</td>
-                    <td colspan="2">Sister Mowkele</td>
-                </tr>
-
-                <tr class="shrink">
-                    <td class="bold short shrink"> WAVE</td>
-                    <td colspan="1" class="shrink"></td>
-                    <td class="right shrink">2026-01-19</td>
-                </tr>
-
-                <tr class="shrink">
-                    <td colspan="3" class="header-cell center">LISTE DES BESOINS</td>
-                </tr>
-                <tr class="shrink left">
-                    <th class="col-des header-cell">DESIGNATION</th>
-                    <th class="col-but header-cell">BUT</th>
-                    <th class="col-amt header-cell">MONTANT</th>
-                </tr>
-
-                <tr class="no-bottom-border" style="height: 30px;">
-                    <td class="no-bottom-border">400-5930 Food and Personal Items</td>
-                    <td class="no-top-border no-bottom-border">Failed to withdraw sacred funds </td>
-                    <td class="no-top-border no-bottom-border right">55,000 XOF</td>
-                </tr>
-
-                <tr style="height: 30px;">
-                    <td class="no-top-border no-bottom-border">&nbsp;</td>
-                    <td class="no-top-border no-bottom-border"></td>
-                    <td class="no-top-border no-bottom-border"></td>
-                </tr>
-                <tr style="height: 30px;">
-                    <td class="no-top-border no-bottom-border">&nbsp;</td>
-                    <td class="no-top-border no-bottom-border"></td>
-                    <td class="no-top-border no-bottom-border"></td>
-                </tr>
-                <tr style="height: 30px;">
-                    <td class="no-top-border no-bottom-border">&nbsp;</td>
-                    <td class="no-top-border no-bottom-border"></td>
-                    <td class="no-top-border no-bottom-border"></td>
-                </tr>
-
-                <tr>
-                    <td colspan="2" class="right bold">TOTAL</td>
-                    <td class="right bold" style="font-size: 14pt;">55,000 XOF</td>
-                </tr>
-            </table>
-
-            <table>
-                <tr>
-                    <td width="50%">SIGNATURE</td>
-                    <td width="50%">SIGNATURE DU PRESIDENT</td>
-                </tr>
-                <tr>
-                    <td class="sig-box"></td>
-                    <td class="sig-box"></td>
-                </tr>
-                <tr>
-                    <td>19/01/2026</td>
-                    <td></td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="receipts-section">
-            <div class="receipt-container">
-                <img src="" alt="No Main Receipt">
-            </div>
-            <div class="receipt-container">
-                <img src="" alt="No Wave Receipt
-                ">
-            </div>
-        </div>
-    </div>
+  <main>
+    <h1>This page has moved</h1>
+    <p>Continue to <a href="about.html#promise">the SeniorConnex promise</a>.</p>
+  </main>
 </body>
 
 </html>

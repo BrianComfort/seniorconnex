@@ -49,7 +49,7 @@
           <a href="for-care-providers.html" role="menuitem">
             <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.8">
-                <path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M9 7a4 4 0 1 0 0 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
               </svg></span>
             <span>
               <p class="menu-title">Care providers</p>
@@ -57,7 +57,7 @@
             </span>
           </a>
           <a href="for-facilities.html" role="menuitem">
-            <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            <span class="menu-icon menu-fac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.8">
                 <path d="M3 21h18M5 21V7l7-4 7 4v14M9 10h.01M9 14h.01M15 10h.01M15 14h.01" />
               </svg></span>
@@ -81,178 +81,71 @@
 
     <header class="hero">
       <div class="container">
-        <div class="hero-grid">
+        <div class="hero-system">
           <div class="hero-copy">
-            <h1 class="reveal" style="margin-top:18px;">Connecting seniors.<br><span class="em">Empowering
-                independence.</span></h1>
+            <p class="launch-note reveal">Pre-launch care technology with launch-ready commitments</p>
+            <h1 class="reveal">Connected care at home.</h1>
             <p class="lede reveal">
-              SeniorConnex provides technology that keeps seniors safe with biometric monitoring and connected with video
-              calls with their family.
-
+              SeniorConnex connects a vitals watch, privacy-first room sensors, video check-ins, and caregiver alerts
+              into one calm view for the people caring for an older adult.
             </p>
             <div class="btn-row reveal">
               <a href="for-families.html" class="btn btn-coral">For families</a>
               <a href="for-care-providers.html" class="btn btn-primary">For care providers</a>
-              <a href="for-facilities.html" class="btn btn-outline">For facilities</a>
+              <a href="for-facilities.html" class="btn btn-green">For facilities</a>
             </div>
-
           </div>
-          <div class="hero-media-col reveal-scale">
-            <div class="hero-media">
-              <img src="assets/images/family-grandma-kiss.jpg" alt="A grandmother kissing her young granddaughter on the cheek at home." />
-              <div class="float-card fc-top">
-                <span><span class="fc-label">Heart rate</span><span class="fc-value">72 bpm · resting</span></span>
+          <div class="care-panel reveal-scale">
+            <img src="assets/images/family-grandma-kiss.jpg" alt="A grandmother kissing her young granddaughter on the cheek at home." />
+            <div class="care-panel-stack" aria-label="Example SeniorConnex care signals">
+              <div class="signal-card">
+                <span class="signal-dot"></span>
+                <span><span class="signal-title">All clear at home</span><span class="signal-meta">Bedroom radar, no camera needed</span></span>
+                <span class="signal-value">2:14 PM</span>
               </div>
-              <div class="float-card fc-bottom">
-                <span><span class="fc-label">Status</span><span class="fc-value">All clear · at home</span></span>
+              <div class="signal-card success">
+                <span class="signal-dot"></span>
+                <span><span class="signal-title">Vitals within normal range</span><span class="signal-meta">Watch reading every 15 minutes</span></span>
+                <span class="signal-value">72 bpm</span>
+              </div>
+              <div class="signal-card alert">
+                <span class="signal-dot"></span>
+                <span><span class="signal-title">Escalation path ready</span><span class="signal-meta">Family, caregiver, then care team</span></span>
+                <span class="signal-value">&lt;5 sec</span>
               </div>
             </div>
-            <a href="about.html" class="btn-text hero-why">Learn why we built this <span class="arrow">→</span></a>
           </div>
         </div>
       </div>
     </header>
 
-    <section class="section bg-paper" id="demo">
-      <div class="container">
-        <div class="video-container reveal-scale">
-          <video controls>
-            <source src="assets/videos/seniorconnex-demo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-    </section>
-
-    <section class="section bg-cream" id="pillars">
-      <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="h2" style="max-width:20ch; margin-inline:auto;">Built around what matters most.</h2>
-        </div>
-        <div class="grid-4 grid-top">
-          <div class="card pillar p-safety reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 2 4 6v6c0 5 3.4 8.5 8 10 4.6-1.5 8-5 8-10V6Z" />
-                <path d="M9 12l2 2 4-4" />
-              </svg></div>
-            <h3 class="h3">Safety</h3>
-            <p>Real-time alerts and around-the-clock monitoring, so a fall or change in health never goes unnoticed.</p>
-          </div>
-          <div class="card pillar p-connection reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                <circle cx="9" cy="7" r="3.2" />
-                <path d="M22 21v-2a4 4 0 0 0-3-3.8M16 3.2A4 4 0 0 1 16 11" />
-              </svg></div>
-            <h3 class="h3">Connection</h3>
-            <p>One-tap video calls and shared updates keep seniors close to the people they love, every single day.</p>
-          </div>
-          <div class="card pillar p-wellness reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M3 12h4l2-5 4 10 2-5h6" />
-              </svg></div>
-            <h3 class="h3">Wellness</h3>
-            <p>Gentle support for mind and body: vitals, activity, and rest tracked in plain, reassuring language.</p>
-          </div>
-          <div class="card pillar p-independence reveal">
-            <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M12 3v3M12 18v3M3 12h3M18 12h3M6 6l2 2M16 16l2 2M18 6l-2 2M8 16l-2 2" />
-              </svg></div>
-            <h3 class="h3">Independence</h3>
-            <p>Tools designed for confidence at home, so seniors keep their routines, their dignity, and their freedom.
-            </p>
-          </div>
-        </div>
-      </div>
+    <section class="proof-band" aria-label="SeniorConnex launch commitments">
+      <div class="proof-item reveal"><b>2 to 4</b><span>home sensors placed around how the senior actually lives</span></div>
+      <div class="proof-item reveal"><b>Radar</b><span>for bedrooms and bathrooms where cameras do not belong</span></div>
+      <div class="proof-item reveal"><b>Watch</b><span>for frequent vitals readings and fall signals</span></div>
+      <div class="proof-item reveal"><b>&lt;5 sec</b><span>alert escalation target when a fall or urgent change is detected</span></div>
     </section>
 
     <section class="section bg-paper" id="technology">
       <div class="container">
-        <div class="section-head reveal">
-          <h2 class="h2" style="max-width:24ch;">One connected platform behind every moment of care.</h2>
-          <p class="lede">Everyone shares the same information on their senior's health.</p>
-        </div>
-
-        <div class="showcase media-left reveal" style="margin-top:52px;">
-          <div class="showcase-media reveal-scale">
-            <figure class="mac-window" style="margin:0;">
-              <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span
-                    class="mac-dot y"></span><span class="mac-dot g"></span></span><span
-                  class="mac-url">app.seniorconnex.com</span></div>
-              <img src="assets/images/portal/connect-home.png"
-                alt="The SeniorConnex care app home screen, showing each senior under care with one-tap call and vitals buttons."
-                loading="lazy" />
-            </figure>
+        <div class="privacy-grid">
+          <div class="section-head reveal">
+            <h2 class="h2">The home stays familiar. The care circle gets clearer.</h2>
+            <p class="lede">
+              SeniorConnex is designed around a real home, not a lab. Cameras can support common spaces. Radar handles
+              the private rooms. The watch fills in vitals. The app turns all of it into plain language.
+            </p>
+            <div class="btn-row" style="margin-top:28px;">
+              <a href="products.html" class="btn btn-primary">Explore products</a>
+              <a href="solutions.html" class="btn btn-outline">How it works</a>
+            </div>
           </div>
-          <div class="showcase-copy">
-            <h3 class="h3">The care app: everyone in the loop</h3>
-            <p>Family members and caregivers open one app and the answer is already on screen. It runs in any browser and there is no need for installation.</p>
-            <ul class="check-list">
-              <li>Live vitals and presence for every senior, at a glance</li>
-              <li>One-tap video calls with the people they love</li>
-              <li>Instant fall and health alerts, routed to the right person</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="showcase reveal" style="margin-top:72px;">
-          <div class="showcase-copy">
-            <h3 class="h3">The operations portal: run care at scale</h3>
-            <p>Agencies and facilities sign in to a secure web portal and land on a live operations view,
-              every organization, caregiver, and device in one place, with the controls staff and
-              administrators need.</p>
-            <ul class="check-list">
-              <li>HIPAA-grade sign-in with full audit logging</li>
-              <li>Role-scoped access, the right view for every person</li>
-              <li>Live hardware and activity status, no stale reports</li>
-            </ul>
-          </div>
-          <div class="showcase-media reveal-scale">
-            <figure class="mac-window" style="margin:0;">
-              <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span
-                    class="mac-dot y"></span><span class="mac-dot g"></span></span><span
-                  class="mac-url">app.seniorconnex.com</span></div>
-              <img src="assets/images/portal/dashboard.png"
-                alt="The SeniorConnex operations portal dashboard, with organizations, seniors monitored, caregivers, and hardware status."
-                loading="lazy" />
-            </figure>
-          </div>
-        </div>
-
-        <div class="grid-3" style="margin-top:72px;">
-          <figure class="mac-window reveal" style="margin:0;">
-            <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span
-                  class="mac-dot y"></span><span class="mac-dot g"></span></span><span
-                class="mac-url">app.seniorconnex.com</span></div>
-            <img src="assets/images/portal/connect-vitals.png"
-              alt="The vitals screen, showing heart rate, blood oxygen, respiratory rate, temperature, and steps for each senior."
-              loading="lazy" />
-          </figure>
-          <figure class="mac-window reveal" style="margin:0;">
-            <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span
-                  class="mac-dot y"></span><span class="mac-dot g"></span></span><span
-                class="mac-url">app.seniorconnex.com</span></div>
-            <img src="assets/images/portal/connect-alerts.png"
-              alt="The alerts feed, showing falls, bed exits, and inactivity with severity labels and acknowledgement."
-              loading="lazy" />
-          </figure>
-          <figure class="mac-window reveal" style="margin:0;">
-            <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span
-                  class="mac-dot y"></span><span class="mac-dot g"></span></span><span
-                class="mac-url">app.seniorconnex.com</span></div>
-            <img src="assets/images/portal/users.png"
-              alt="The users screen, where administrators manage caregivers and roles across the organization."
-              loading="lazy" />
-          </figure>
-        </div>
-
-        <div class="center" style="margin-top:48px;">
-          <p class="lede" style="margin:0 auto 22px; max-width:34ch;">Built for the people who do the caring.</p>
-          <div class="btn-row" style="justify-content:center;">
-            <a href="for-families.html" class="btn btn-coral">For families</a>
-            <a href="for-care-providers.html" class="btn btn-primary">For care providers</a>
-            <a href="for-facilities.html" class="btn btn-outline">For facilities</a>
+          <div class="privacy-map reveal-scale">
+            <div class="room-row"><strong>Living room</strong><span>Optional camera for context, movement, and video connection.</span></div>
+            <div class="room-row"><strong>Kitchen</strong><span>Optional camera for activity and routine confidence.</span></div>
+            <div class="room-row"><strong>Bedroom</strong><span>Contactless radar for presence, bed exit, and breathing patterns.</span></div>
+            <div class="room-row"><strong>Bathroom</strong><span>Radar-based monitoring without exposing private moments.</span></div>
+            <div class="room-row"><strong>Wrist</strong><span>Vitals watch for heart rate, oxygen, activity, and fall signals.</span></div>
           </div>
         </div>
       </div>
@@ -260,119 +153,48 @@
 
     <section class="section bg-sand" id="how">
       <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="h2" style="max-width:22ch; margin-inline:auto;">Up and running in about a day.</h2>
+        <div class="section-head reveal">
+          <h2 class="h2">From a quiet signal to the right response.</h2>
+          <p class="lede">The system is built for proactive care: notice changes early, route urgent alerts fast, and keep the care circle aligned.</p>
         </div>
-        <div class="steps steps-4">
-          <div class="step reveal">
-            <span class="step-n">1</span>
-            <h3>We scope your care circle</h3>
-            <p>A quick conversation with a real person to set up who's connected and who gets alerted first.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-n">2</span>
-            <h3>The kit arrives ready</h3>
-            <p>Watch, sensors, and tablet show up pre-paired and ready to use.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-n">3</span>
-            <h3>First readings in minutes</h3>
-            <p>Vitals and presence light up on every phone in the circle, with a friendly welcome notification.</p>
-          </div>
-          <div class="step reveal">
-            <span class="step-n">4</span>
-            <h3>Peace of mind, day one</h3>
-            <p>Falls and health changes escalate by text in seconds, to exactly the right person.</p>
-          </div>
-        </div>
-        <div class="center" style="margin-top:40px;">
-          <a href="solutions.html" class="btn btn-outline reveal">See the full solution</a>
+        <div class="care-flow grid-top">
+          <div class="flow-row reveal"><span>1</span><div><h3>Sense the pattern</h3><p>Radar, cameras where appropriate, and the watch read presence, movement, falls, activity, rest, and vitals.</p></div></div>
+          <div class="flow-row reveal"><span>2</span><div><h3>Separate normal from concerning</h3><p>The platform compares frequent readings and routine behavior so families see changes before they become a crisis.</p></div></div>
+          <div class="flow-row reveal"><span>3</span><div><h3>Alert the right person</h3><p>Falls and urgent deviations route by text to the family, caregiver, or care team based on the escalation path.</p></div></div>
+          <div class="flow-row reveal"><span>4</span><div><h3>Keep everyone in the loop</h3><p>Every person caring for the senior works from the same shared view, with video connection when a human voice matters.</p></div></div>
         </div>
       </div>
     </section>
 
     <section class="section bg-paper" id="products">
       <div class="container">
-        <div class="section-head reveal">
-          <h2 class="h2" style="max-width:26ch;">One all-in-one care kit. Everything included.</h2>
-          <p class="lede">SeniorConnex is sold as a simple monthly subscription. You get the hardware, both apps, and
-            the caregiver portal, fully set up and supported, with nothing for the senior to figure out.</p>
-        </div>
-        <div class="grid-3 grid-top">
-          <div class="device reveal">
-            <div class="device-visual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <rect x="6" y="2.5" width="12" height="19" rx="3" />
-                <path d="M10 5.5h4" />
-                <circle cx="12" cy="17" r="1" />
-              </svg></div>
-            <div class="device-body">
-              <h3 class="h3">Family Portal</h3>
-              <p>A one-tap view for family and caregivers, right in any web browser, nothing to install.</p>
+        <div class="showcase media-left">
+          <div class="showcase-media reveal-scale">
+            <figure class="mac-window" style="margin:0;">
+              <div class="mac-bar"><span class="mac-dots"><span class="mac-dot r"></span><span class="mac-dot y"></span><span class="mac-dot g"></span></span><span class="mac-url">app.seniorconnex.com</span></div>
+              <img src="assets/images/portal/connect-vitals.png" alt="The SeniorConnex vitals screen showing heart rate, blood oxygen, respiratory rate, temperature, and steps for each senior." loading="lazy" />
+            </figure>
+          </div>
+          <div class="showcase-copy reveal">
+            <h2 class="h2">A complete care kit, not another single gadget.</h2>
+            <p class="lede">
+              The watch, room sensors, bedside tablet, family app, and caregiver portal are sold together as one supported system.
+            </p>
+            <ul class="check-list">
+              <li>Vitals watch for frequent biometric readings</li>
+              <li>Two to four home sensors based on privacy needs</li>
+              <li>Bedside video tablet for one-tap calls</li>
+              <li>Family and caregiver views in any web browser</li>
+            </ul>
+            <div class="btn-row" style="margin-top:26px;">
+              <a href="products.html" class="btn btn-outline">See products and pricing</a>
             </div>
-          </div>
-          <div class="device dv-coral reveal">
-            <div class="device-visual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <rect x="6" y="6" width="12" height="12" rx="3" />
-                <path d="M9 6l1-3h4l1 3M9 18l1 3h4l1-3" />
-                <path d="M12 10v2.5l1.6 1" />
-              </svg></div>
-            <div class="device-body">
-              <h3 class="h3">The Care Kit</h3>
-              <p>A biometric smartwatch, a contactless in-home radar sensor, and a bedside video tablet to make calls with family. All shipped
-                pre-paired and ready to use.</p>
-            </div>
-          </div>
-          <div class="device dv-green reveal">
-            <div class="device-visual"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M3 11l9-7 9 7" />
-                <path d="M5 10v10h14V10" />
-                <path d="M9 20v-5h6v5" />
-              </svg></div>
-            <div class="device-body">
-              <h3 class="h3">Caregiver Portal</h3>
-              <p>A secure, HIPAA-grade web dashboard for caregivers, agencies, and facilities, live from the first
-                screen.</p>
-            </div>
-          </div>
-        </div>
-        <p class="lede reveal" style="margin-top:30px; max-width:64ch;"><strong style="color:var(--ink);">Plans from
-            $500 to $700 per month, per senior</strong>, including the full kit plus 24/7 monitoring, fall detection,
-          video calls, and software updates.</p>
-        <div style="margin-top:24px;">
-          <a href="products.html" class="btn-text reveal">See full products and pricing <span class="arrow">→</span></a>
-        </div>
-      </div>
-    </section>
-
-
-
-    <section class="section bg-brand" id="stats">
-      <div class="container">
-        <div class="section-head center reveal">
-          <h2 class="h2" style="max-width:20ch; margin-inline:auto;">The numbers behind the calm.</h2>
-        </div>
-        <div class="grid-4 grid-top">
-          <div class="stat reveal">
-            <p class="stat-num"><span data-count="24">0</span>/7</p>
-            <p class="stat-label">Continuous monitoring</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat-num">&lt;<span data-count="5">0</span>s</p>
-            <p class="stat-label">Fall alert escalation</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat-num"><span data-count="256">0</span>-bit</p>
-            <p class="stat-label">AES encryption</p>
-          </div>
-          <div class="stat reveal">
-            <p class="stat-num">100<span>%</span></p>
-            <p class="stat-label">Privacy by design</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-paper" id="mission">
+    <section class="section bg-cream" id="mission">
       <div class="container">
         <div class="split image-right">
           <div class="media reveal-scale">
@@ -380,11 +202,10 @@
           </div>
           <div class="copy reveal">
             <div class="copy-inner">
-              <h2 class="h2">A care network designed for everyone.</h2>
+              <h2 class="h2">Built for seniors first, sold to the people who care for them.</h2>
               <p class="lede">
-                We've each cared for someone we love and felt the worry of not knowing what's happening when we
-                can't be there. SeniorConnex was built to answer that worry, to bring everyone together around the
-                senior and create peace of mind for the whole family.
+                Adult children and caregivers need a clearer picture. Seniors need dignity, privacy, and the freedom
+                to keep familiar routines. SeniorConnex is designed to protect both sides of that promise.
               </p>
               <div style="margin-top:24px;">
                 <a href="about.html" class="btn-text">Read our story <span class="arrow">→</span></a>
@@ -395,12 +216,21 @@
       </div>
     </section>
 
+    <section class="section bg-paper">
+      <div class="container">
+        <div class="persona-strip reveal">
+          <a href="for-families.html"><h3 class="h3">For families</h3><p>Know what is happening without calling every hour or invading privacy.</p></a>
+          <a href="for-care-providers.html"><h3 class="h3">For care providers</h3><p>Coordinate alerts, handoffs, and documentation from one secure view.</p></a>
+          <a href="for-facilities.html"><h3 class="h3">For facilities</h3><p>Bring resident visibility and family confidence into daily operations.</p></a>
+        </div>
+      </div>
+    </section>
+
     <section class="section bg-cream">
       <div class="container">
         <div class="cta-banner reveal">
-          <h2 class="h2">Ready to deliver better care to your senior?</h2>
-          <p class="lede">Tell us a little about your situation and we'll help you find the right solution for your family or care team.
-          </p>
+          <h2 class="h2">Help shape SeniorConnex before launch.</h2>
+          <p class="lede">Tell us about the senior you care for and the kind of home, family, or care team around them.</p>
           <div class="btn-row">
             <a href="contact.html" class="btn btn-on-brand">Get Started</a>
             <a href="solutions.html" class="btn btn-ghost-light">Explore solutions</a>
@@ -446,29 +276,6 @@
           <li><a href="contact.html#support">Support</a></li>
           <li><a href="contact.html#locations">Locations</a></li>
         </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <div class="footer-social">
-          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.5-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4c-.8.2-1.5.8-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.5 1.7 1.7 1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.7 15.3V8.7l5.7 3.3-5.7 3.3z" />
-            </svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M6.94 5a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM3.3 8.5h3.3V21H3.3V8.5zM9.5 8.5h3.2v1.7h.05c.45-.85 1.55-1.75 3.2-1.75 3.4 0 4.05 2.25 4.05 5.15V21h-3.3v-5.5c0-1.3 0-3-1.85-3s-2.1 1.45-2.1 2.9V21H9.5V8.5z" />
-            </svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.2c-1.2 0-1.6.75-1.6 1.5V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12z" />
-            </svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
-              stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-            </svg></a>
-        </div>
       </div>
     </div>
     <div class="footer-bottom">
