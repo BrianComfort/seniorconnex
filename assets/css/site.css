@@ -341,8 +341,6 @@ h1, h2, h3, h4, .display, .h1, .h2, .h3, .h4 {
 .btn svg { width: 18px; height: 18px; }
 .btn-primary { background: var(--blue-600); color: #fff; border-color: var(--blue-600); box-shadow: 0 12px 26px -12px rgba(31,102,181,0.75); }
 .btn-primary:hover { background: var(--blue-700); border-color: var(--blue-700); transform: translateY(-2px); }
-.btn-outline { background: transparent; color: var(--blue-700); border-color: var(--blue-200); }
-.btn-outline:hover { border-color: var(--blue-500); background: var(--blue-50); transform: translateY(-2px); }
 .btn-on-brand { background: #fff; color: var(--blue-700); border-color: #fff; }
 .btn-on-brand:hover { background: var(--cloud); transform: translateY(-2px); }
 .btn-ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.55); }
