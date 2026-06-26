@@ -368,7 +368,7 @@ h1, h2, h3, h4, .display, .h1, .h2, .h3, .h4 {
   content: "";
   position: absolute; inset: 0;
   background:
-    radial-gradient(60% 50% at 88% 8%, rgba(255,194,75,0.18), transparent 60%),
+    radial-gradient(60% 50% at 88% 8%, rgba(121,177,232,0.20), transparent 60%),
     radial-gradient(55% 50% at 5% 95%, rgba(46,123,208,0.12), transparent 60%);
   z-index: 0; pointer-events: none;
 }
@@ -735,7 +735,7 @@ h1, h2, h3, h4, .display, .h1, .h2, .h3, .h4 {
 }
 .cta-banner::before {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(50% 60% at 85% 10%, rgba(255,194,75,0.28), transparent 60%);
+  background: radial-gradient(50% 60% at 85% 10%, rgba(122,177,232,0.30), transparent 60%);
   pointer-events: none;
 }
 .cta-banner > * { position: relative; z-index: 1; }
