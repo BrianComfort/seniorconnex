@@ -6,3 +6,6 @@
 Thumbs.db
 .DS_Store
 desktop.ini
+
+# impeccable tooling state (not part of the site)
+.impeccable/
