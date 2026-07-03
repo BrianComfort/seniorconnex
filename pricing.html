@@ -16,48 +16,39 @@
 
   <style>
     /* ===== Scoped pricing-calculator styles (page-local; site.css untouched) ===== */
-    /* Compact the section so the whole calculator fits in one screen */
-    #kit.section { padding-top: clamp(30px, 4.5vh, 52px); padding-bottom: clamp(30px, 4.5vh, 52px); }
-    #kit .section-head { margin-bottom: 0; }
-    #kit .section-head .lede { margin-top: 10px; font-size: 16px; max-width: 56ch; }
-    /* Both cards share compact padding and fill the row to an equal height */
-    .kit-layout > .price-card { padding: clamp(20px, 1.9vw, 28px); height: 100%; }
-
     .kit-layout {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
       gap: clamp(22px, 2.6vw, 34px);
-      align-items: stretch;
-      margin-top: clamp(26px, 3.5vh, 40px);
+      align-items: start;
+      margin-top: clamp(36px, 5vh, 56px);
     }
     @media (max-width: 900px) {
       .kit-layout { grid-template-columns: 1fr; max-width: 560px; margin-inline: auto; }
     }
 
-    /* Basic-kit card reuses .price-card look-and-feel; distribute to fill height */
-    .kit-basic { display: flex; flex-direction: column; }
-    .kit-basic .tier-price { margin-bottom: 18px; }
-    .kit-basic .check-list { margin-bottom: 0; }
-    .kit-basic .kit-note { font-size: 14px; color: var(--ink-mute); margin: 18px 0 0; padding-top: 18px; border-top: 1px solid var(--line); margin-top: auto; }
+    /* Basic-kit card reuses .price-card look-and-feel */
+    .kit-basic .tier-price { margin-bottom: 20px; }
+    .kit-basic .kit-note { font-size: 14px; color: var(--ink-mute); margin: 18px 0 0; }
 
     /* Configurator card */
     .kit-config { display: flex; flex-direction: column; }
-    .kit-config .config-head { margin-bottom: 4px; }
-    .kit-config .config-sub { font-size: 15px; color: var(--ink-soft); margin: 0 0 14px; }
+    .kit-config .config-head { margin-bottom: 6px; }
+    .kit-config .config-sub { font-size: 15px; color: var(--ink-soft); margin: 0 0 20px; }
 
-    .kit-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: 7px; }
+    .kit-rows { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
     .kit-row {
       display: grid;
       grid-template-columns: 1fr auto;
       align-items: center;
       gap: 14px;
-      padding: 9px 15px;
+      padding: 14px 16px;
       background: var(--cloud);
       border: 1px solid var(--line);
       border-radius: var(--radius-sm);
     }
-    .kit-row .part-name { font-weight: 600; color: var(--ink); font-size: 15.5px; margin: 0; }
-    .kit-row .part-meta { font-size: 13px; color: var(--ink-mute); margin: 2px 0 0; }
+    .kit-row .part-name { font-weight: 600; color: var(--ink); font-size: 16px; margin: 0; }
+    .kit-row .part-meta { font-size: 13.5px; color: var(--ink-mute); margin: 2px 0 0; }
 
     .stepper { display: inline-flex; align-items: center; gap: 4px; }
     .stepper button {
@@ -88,15 +79,15 @@
 
     /* Order summary */
     .kit-summary {
-      margin-top: auto;
-      padding-top: 18px;
+      margin-top: 22px;
+      padding-top: 20px;
       border-top: 1px solid var(--line);
     }
-    .kit-summary h3 { font-size: 17px; margin: 0 0 8px; }
-    .summary-lines { list-style: none; padding: 0; margin: 0 0 12px; display: grid; gap: 6px; }
+    .kit-summary h3 { font-size: 18px; margin: 0 0 12px; }
+    .summary-lines { list-style: none; padding: 0; margin: 0 0 16px; display: grid; gap: 9px; }
     .summary-lines li {
       display: flex; justify-content: space-between; gap: 12px;
-      font-size: 15px; color: var(--ink-soft);
+      font-size: 15.5px; color: var(--ink-soft);
     }
     .summary-lines .s-label .s-extra { color: var(--coral-600); font-weight: 600; }
     .summary-lines .s-amount { font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
@@ -104,7 +95,7 @@
 
     .summary-total {
       display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
-      padding-top: 13px;
+      padding-top: 16px;
       border-top: 1px solid var(--line);
     }
     .summary-total .t-label { font-family: var(--font-head); font-weight: 600; font-size: 17px; color: var(--ink); }
@@ -114,8 +105,8 @@
       letter-spacing: -0.02em; color: var(--ink); line-height: 1;
       font-variant-numeric: tabular-nums;
     }
-    .kit-config .btn { width: 100%; justify-content: center; margin-top: 16px; }
-    .kit-config .placeholder-note { font-size: 13px; color: var(--ink-mute); margin: 10px 0 0; text-align: center; }
+    .kit-config .btn { width: 100%; justify-content: center; margin-top: 22px; }
+    .kit-config .placeholder-note { font-size: 13px; color: var(--ink-mute); margin: 14px 0 0; text-align: center; }
   </style>
 </head>
 
@@ -150,7 +141,7 @@
           <a href="for-care-providers.html" role="menuitem">
             <span class="menu-icon menu-care"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="1.8">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                <path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75M9 7a4 4 0 1 0 0 0M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2" />
               </svg></span>
             <span>
               <p class="menu-title">Care providers</p>
@@ -177,6 +168,9 @@
       <span></span><span></span><span></span>
     </button>
   </nav>
+
+  <main id="main">
+
 
   <section class="section bg-paper" id="kit">
     <div class="container">
