@@ -321,7 +321,7 @@ h1, h2, h3, h4, .display, .h1, .h2, .h3, .h4 {
     box-shadow: none; border: 0; background: rgba(46,123,208,0.06);
     min-width: 0; display: none; margin-top: 4px;
   }
-  .nav-drop.open .nav-drop-menu { display: grid; }
+  .nav-drop.open .nav-drop-menu { display: grid; transform: none; left: auto; width: 100%; }
   .menu-toggle {
     display: inline-flex !important;
     width: 44px; height: 44px; flex-direction: column;
