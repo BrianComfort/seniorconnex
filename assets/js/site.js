@@ -7,37 +7,96 @@
 })();
 
 (function () {
+  const nav = document.getElementById('nav');
   const btn = document.getElementById('menuToggle');
   const links = document.getElementById('navLinks');
-  if (!btn || !links) return;
-  btn.addEventListener('click', () => {
-    const open = links.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  links.addEventListener('click', (e) => {
-    if (e.target.tagName === 'A') links.classList.remove('open');
-  });
-})();
-
-(function () {
   const drops = document.querySelectorAll('.nav-drop');
-  if (!drops.length) return;
+  const MOBILE = '(max-width: 940px)';
+  const isMobile = () => window.matchMedia(MOBILE).matches;
+
+  const collapseDrops = () => {
+    drops.forEach(d => {
+      d.classList.remove('open');
+      const t = d.querySelector('.nav-drop-trigger');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  };
+
+  // ---- Mobile sheet open/close ----
+  const openMenu = () => {
+    if (!links || !btn) return;
+    links.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.setAttribute('aria-label', 'Close menu');
+    document.documentElement.classList.add('nav-open');
+  };
+  const closeMenu = () => {
+    if (!links || !btn) return;
+    links.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.setAttribute('aria-label', 'Open menu');
+    document.documentElement.classList.remove('nav-open');
+    collapseDrops();
+  };
+
+  if (btn && links) {
+    btn.addEventListener('click', () => {
+      if (links.classList.contains('open')) closeMenu();
+      else openMenu();
+    });
+
+    // Close the sheet only when a real navigation link is tapped.
+    // The dropdown <button> trigger must NOT close it (handled below).
+    links.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (a && links.contains(a)) closeMenu();
+    });
+  }
+
+  // ---- Dropdown "Who it's for" ----
+  // Desktop: click-to-open floating menu (outside-click / Escape close).
+  // Mobile: inline expand/collapse inside the sheet, without closing the sheet.
   drops.forEach(drop => {
     const trigger = drop.querySelector('.nav-drop-trigger');
     if (!trigger) return;
     trigger.addEventListener('click', (e) => {
       e.stopPropagation();
       const wasOpen = drop.classList.contains('open');
-      drops.forEach(d => d.classList.remove('open'));
+      collapseDrops();
       drop.classList.toggle('open', !wasOpen);
       trigger.setAttribute('aria-expanded', !wasOpen ? 'true' : 'false');
     });
   });
+
+  // ---- Outside tap/click ----
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('.nav-drop')) drops.forEach(d => d.classList.remove('open'));
+    // Collapse any open dropdown when clicking outside it.
+    if (!e.target.closest('.nav-drop')) collapseDrops();
+    // On mobile, tapping outside the nav closes the whole sheet.
+    if (links && links.classList.contains('open') && nav && !nav.contains(e.target)) {
+      closeMenu();
+    }
   });
+
+  // ---- Escape ----
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') drops.forEach(d => d.classList.remove('open'));
+    if (e.key !== 'Escape') return;
+    if (links && links.classList.contains('open')) closeMenu();
+    else collapseDrops();
+  });
+
+  // ---- Reset on resize to desktop ----
+  window.addEventListener('resize', () => {
+    if (!isMobile()) {
+      // Leaving mobile: never leave the sheet stuck open.
+      if (links) links.classList.remove('open');
+      if (btn) {
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', 'Open menu');
+      }
+      document.documentElement.classList.remove('nav-open');
+      collapseDrops();
+    }
   });
 })();
 
